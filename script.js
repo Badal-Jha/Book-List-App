@@ -4,7 +4,7 @@ console.log(add);
 add.addEventListener("click", submitBooks);
 
 function submitBooks(e) {
-  e.preventDefault;
+  e.preventDefault; //this is importatant
 
   var title = document.getElementById("title").value;
   var author = document.getElementById("author").value;
@@ -36,8 +36,13 @@ function submitBooks(e) {
     //add isbn
     addISBN.appendChild(document.createTextNode(ISBN));
 
+    //append addtitle
     addElement.appendChild(addtitle);
+
+    //append addauthor
     addElement.appendChild(addauthor);
+
+    //append addISBN
     addElement.appendChild(addISBN);
 
     var booklist = document.getElementById("book-list");
