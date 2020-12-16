@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Book List</title>
+  </head>
+  <body>
+    <h1 id="heading">Books List App</h1>
+    <div class="main">
+      <form>
+        <div class="book-details">
+          <p><label for="title" class="lable">Title</label></p>
+          <input type="text" class="inp" id="title" autocomplete="Off" />
+        </div>
+        <div class="book-details">
+          <p><label for="title" class="lable">Author</label></p>
+          <input type="text" class="inp" id="author" autocomplete="Off" />
+        </div>
+        <div class="book-details">
+          <p>
+            <label for="title" class="lable" autocomplete="Off">ISBN</label>
+          </p>
+          <input type="text" class="inp" id="ISBN" />
+        </div>
+        <input type="button" value="ADD BOOK" id="submit-btn" />
+      </form>
+    </div>
+    <div id="data">
+      <table id="table">
+        <thead>
+          <tr id="row">
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Remove Book</th>
+          </tr>
+        </thead>
+        <tbody id="book-list"></tbody>
+      </table>
+    </div>
+    <div style="text-align: center">
+      Coded with <span style="color: #830000">&#9829;</span>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
