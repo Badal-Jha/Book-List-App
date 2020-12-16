@@ -27,6 +27,7 @@ function submitBooks(e) {
     addISBN.className = "addtd";
 
     //add title
+
     addtitle.appendChild(document.createTextNode(title));
 
     //add author
@@ -45,7 +46,8 @@ function submitBooks(e) {
     //add delete book button
     var deleteBtn = document.createElement("button");
     deleteBtn.className = "btnX";
-    deleteBtn.append(document.createTextNode("X"));
+    var t = document.createTextNode("X");
+    deleteBtn.append(t);
     addElement.appendChild(deleteBtn);
   }
 }
@@ -54,12 +56,14 @@ var item = document.querySelector("#book-list");
 item.addEventListener("click", deleteBook);
 
 function deleteBook(e) {
-  console.log(e.target.value);
+  //console.log(e.target.value);
 
   if (e.target.classList.contains("btnX")) {
     if (confirm("are You sure? ")) {
+      //here x is the parent of target
       var x = e.target.parentElement;
-      console.log(x);
+      // console.log(x);
+      //removeChild remove the x
       item.removeChild(x);
     }
   }
